@@ -1,0 +1,559 @@
+<html>
+    <head>
+        <title>博物館</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon"  href="./image/icon.png">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="script/content.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body >
+        <div data-role="page" id="pageone" style="background:url('./image/background.jpg')">
+            <div data-role="header" data-theme="b">
+                <center><image src="./image/logo.png" class="mylogo"></center>
+                <center> <p id="name"></p></center>
+            </div>
+            <div data-role="main" class="ui-content">
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        <a href="#page2" class="ui-btn ui-corner-all ui-shadow " data-transition="pop">當期展覽</a>
+                    </div>
+
+                    <div class="ui-block-a">
+                        <a href="#page3" class="ui-btn ui-corner-all ui-shadow" data-transition="pop">展覽介紹</a>
+                    </div>
+
+                    <div class="ui-block-a">
+                        <a href="#page4" class="ui-btn ui-corner-all ui-shadow" data-transition="pop">導覽功能</a>
+                    </div>
+
+                    <div class="ui-block-a">
+                        <a href="#page5" class="ui-btn ui-corner-all ui-shadow" id="member" onclick="logout()">會員登入</a>
+                    </div>
+
+                    <div class="ui-block-a">
+                        <a href="#page7" class="ui-btn ui-corner-all ui-shadow" data-transition="pop" id="shop" onclick="check()">購物車</a>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div>
+        </div>
+        <div data-role="page" id="page2">
+            <div data-role="panel" id="myPanel" style="background-color:#DDDDDD">
+                <h2 style="text-align:center">功能列表</h2>
+                <a href="#page3" class="ui-btn ui-corner-all ui-shadow" data-transition="pop">展覽介紹</a>
+                <a href="#page4" class="ui-btn ui-corner-all ui-shadow" data-transition="pop">導覽功能</a>
+                <a href="#page5" class="ui-btn ui-corner-all ui-shadow" id="member2" onclick="logout()">會員登入</a>
+                <a href="#page7" class="ui-btn ui-corner-all ui-shadow" data-transition="pop" id="shop2" onclick="check()">購物車</a>
+            </div>
+            <div data-role="header" data-theme="b">
+                <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-icon-grid ui-shadow ui-btn-icon-left">選單</a>
+                <a href="#pageone" data-transition="slide" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">回首頁</a>
+                <h1>當期展覽</h1>
+            </div>
+            <div data-role="main" class="ui-content" >
+                <ul data-role="listview" data-inset="true">
+                    <li>
+                        <a href="#pen" data-transition="slide">
+                            <img src="./image/pen.jpg" class="img">
+                            <h2>筆有千秋業</h2>
+                            <p>展覽日期：2015/01/01~2015/03/25</p>
+                            <p>陳列室：204, 206</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#water" data-transition="slide" >
+                            <img src="./image/water.jpg" class="img">
+                            <h2>源頭活水來</h2>
+                            <p>展覽日期：2014 年11月28日</p>
+                            <p>地點：304</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#model">
+                            <img src="./image/model.jpg" class="img">
+                            <h2>造型與美感</h2>
+                            <p>展期：2015/01/01~2015/03/25</p>
+                            <p>陳列室：210</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div>            
+        </div>
+        <!-- 筆有千秋業 -->
+        <div data-role="page" id="pen">
+            <div data-role="header" data-theme="b">
+                <a href="#page2" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-shadow ui-btn-icon-left">返回</a>
+                <h1>展覽概述</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <h1>筆有千秋業</h1>
+                <img src="./image/pen.jpg">
+                <p>名稱：筆有千秋業</p>
+                <p>展覽日期：2015/01/01~2015/03/25</p>
+                <p>陳列室：204, 206</p>    
+                <p class="content">書法是漢文化圈特有的藝術，長久以來在中國文化傳統中蔚成體系，也自然應用在日常生活裏，了無古今的隔閡。有關中國書法從古到今發展的歷程，始終是大家關心的課題，本項展覽即由此出發，揭示其間發展的脈絡。
+                    秦漢時代是書法發展的關鍵時期，一方面三代以來古文大篆書寫、銘刻分歧的現象，歸於統一，產生標準書體小篆；另方面春秋戰國時代萌芽的新興書體隸書，也在此際從篆書簡省蛻化成熟，發展為漢代通行的書體。由於時代潮流趨向簡便快捷，隸書又持續蛻變分化，遂有草書、行書和楷書的形成。書體遞變原非朝夕立就，因此進入魏晉南北朝之後，過渡型書風以及各體參雜的混合書風時而可見，顯示書體蛻變遷延歲月，方能在結構和筆法上建立自己的規律。
+                    隋唐時代是另一個關鍵時期，政治統一帶來南北各地書風會流，筆法發展臻於完備，從此楷書成為歷代通行的書體。入宋以後，為保存前賢書法長遠流傳，刻帖日漸盛行。但是宋人並不以繼承傳統為足，書法取向表現個人情性、得其天趣。
+                    元代繼起，轉而提倡復古，晉唐書法傳統得以延續。然而，不受傳統束縛的意念也活躍起來，至明代浮現縱橫跳脫的氣息。明人書法面貌至為紛雜，行草書尤其活潑自由，適與當時依循傳統法度者形成對比。其間突顯個性自成一格的書家，也走出實現自己的路徑，不為時代潮流所吞沒。
+                    清代以降，三代秦漢古文篆隸陸續出土，堪稱是得天獨厚。在務實的學術風氣影響之下，清人摩挲碑版，從而與刻帖相互為用，書法發展的視野得以串聯古今，終能在篆書、隸書兩方面汲古創新，引領新方向。</p> 
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>
+        <!-- 源頭活水來 -->
+        <div data-role="page" id="water">
+            <div data-role="header" data-theme="b">
+                <a href="#page2" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-shadow ui-btn-icon-left">返回</a>
+                <h1>展覽概述</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <h1>源頭活水來</h1>
+                <img src="./image/water.jpg">
+                <p>名稱：源頭活水來</p>
+                <p>展覽日期：2014 年11月28日</p>
+                <p>地點：304</p>
+                <p class="content">十到十四世紀，中國歷史陷入漢人與契丹、女真、蒙古等民族政權並立、更迭，宋、遼、金相互對峙，時而戰爭、時而結盟的局面，直到元朝才天下底定。玉器成長的脈動，並未受政治動盪影響而停滯，反而因為異文化的接觸、衝擊與交融，得以廣納更多元且繽紛、生動的內容，好比朱熹的詩句「為有源頭活水來」一般，顯得生機盎然，並且為後世創立新的典範。
+                    展覽分為四個單元及一個專區：「繼承與變革」，揭示這個時代承接傳統，仍以玉為溝通人神的重要媒介；表現身分的尊貴象徵。而宋代皇室與文人也為表彰道統延續，而興起復古之風，對後來元以至明、清影響深遠。「衝擊與融合」，呈現漢、契丹、女真、蒙古族群，因生活形態差異而發展出特殊題材、類型，並相互欣賞、學習的開放精神。「個體與環境」，展現十到十四世紀玉器藝術表現手法。其中最明顯的特質與變化，除了鮮活、寫實、大量的象生之作外，此時玉器紋樣開始將單獨的個體置入環境中，更完整而靈動的描寫自然，藉以傳達對自然的親近與崇敬。「華麗與質樸」，嘗試以文獻配合目前有限的考古出土及傳世品，探索當時社會氛圍與知識份子的價值觀，對於玉質生活器用的風格所產生之影響。最後，有一類所謂「玉頂」，是冠帽或器蓋頂端的玉雕飾件。其清宮整體的收藏量，以千計數亦不為過，特闢專區，分門別類羅列，呈現玉頂的各式主題、技法與風格外，亦顯數大是美之趣。
+                </p>
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>
+        <!-- 造型與美感 -->
+        <div data-role="page" id="model">
+            <div data-role="header" data-theme="b">
+                <a href="#page2" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-shadow ui-btn-icon-left">返回</a>
+                <h1>展覽概述</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <h1>造型與美感</h1>
+                <img src="./image//model.jpg" >
+                <p>名稱：造型與美感</p>
+                <p>展期：2015/01/01~2015/03/25</p>
+                <p>陳列室：210</p>
+                <p class="content">中國繪畫的發展就如一部交響樂章。藉人物、花卉翎毛、山水等畫科中的風格典範組成幾個重要主題，並在歷史脈絡中加以變奏。
+                    人物畫的典範在六朝至唐代（二二二～九０七）間，經由顧愷之與吳道子等人逐步奠定。山水畫典範的成形約五代（九０七～九六０）之時，而且寓含著地理區域特質。例如荊浩、關仝畫出北方山水風貌，而董源、巨然則有江南水鄉山水的特色。在花卉翎毛畫方面，四川的黃筌與江南的徐熙也形成兩個不同的典範。
+                    宋代（九六０～一二七九）山水畫中的范寬、郭熙、李唐都在既有的典範基礎上推陳出新，成為新的典範。此外，宮廷畫院在宋代藝術帝王的倡導下形成空前盛況。當時的畫家講究對自然的觀察，並添加「詩意」以增強繪畫的內涵與意境。對實物的興趣促成了建築、船車等以器械結構為主的繪畫類型，使其在十一世紀後躍上繪畫的舞台。詩意的強調，則於南宋時期發展出書法、詩文、繪畫三者互相搭配的冊頁精品。另外宋代文人也將藝術的表現概念擴展到「形似」以外的範疇，文人畫開始成為一種新的風格。
+                    在元代（一二七九～一三六八）文人畫由趙孟頫、元四大家（黃公望、吳鎮、倪瓚、王蒙）等人以復古為標的。因復古而有更為多樣的各種風格表現。這些風格逐漸成為繪畫發展過程中的重要典型，在明清以後維持著持續的影響力。
+                    明代（一三六八～一六四四）以後，不同地區的風格特色，成為藝術發展脈絡中的重要環節。蘇州的「吳派」從元四大家那兒變出優雅的文人風格，以浙閩畫家為主的「浙派」則自宮廷繪畫中脫胎，將南宋的典範變成粗放的水墨。松江的董其昌與稍後的王時敏、王鑑、王翬和王原祁等人又接著在對古代典範的「集大成」中，以筆墨再造自然，形成影響深遠的「正統派」。
+                    清代（一六四四～一九一一）帝王在推崇「正統派」作風之餘，也包容歐洲傳教士所帶來的西洋畫法，立體與透視成為對古老典範的新詮釋。宮廷之外的揚州則有標榜著「怪、奇」的一批畫家在高度商業化的市場中活躍。他們的筆墨與形象針對「非正統」的典範而發，而自己也成為後世追求變革的典範依據。
+                <p>
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>
+        <!-- 展覽介紹 -->       
+        <div data-role="page" id="page3">
+            <div data-role="header" data-theme="b">
+                <a href="#pageone" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-shadow ui-btn-icon-left">返回</a>
+                <h1>展覽介紹</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a"><a href="#img01" data-transition="pop" class="ui-btn ui-corner-all ui-shadow"><img src="./image/img01.jpg" ></a><br></div>
+                    <div class="ui-block-a"><a href="#img02" data-transition="pop" class="ui-btn ui-corner-all ui-shadow"><img src="./image/img02.jpg" ></a><br></div>
+                    <div class="ui-block-a"><a href="#img03" data-transition="pop" class="ui-btn ui-corner-all ui-shadow"><img src="./image/img03.jpg" ></a><br></div>
+                    <div class="ui-block-a"><a href="#img04" data-transition="pop" class="ui-btn ui-corner-all ui-shadow"><img src="./image/img04.jpg" ></a><br></div>
+                    <div class="ui-block-a"><a href="#img05" data-transition="pop" class="ui-btn ui-corner-all ui-shadow"><img src="./image/img05.jpg" ></a><br></div>
+                    <div class="ui-block-a"><a href="#img06" data-transition="pop" class="ui-btn ui-corner-all ui-shadow"><img src="./image/img06.jpg" ></a><br></div>
+                    <div class="ui-block-a"><a href="#img07" data-transition="pop" class="ui-btn ui-corner-all ui-shadow"><img src="./image/img07.jpg" ></a><br></div>
+                    <div class="ui-block-a"><a href="#img08" data-transition="pop" class="ui-btn ui-corner-all ui-shadow"><img src="./image/img08.jpg" ></a><br></div>
+                </div>
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>
+        <div data-role="page" id="img01">
+            <div data-role="header" data-theme="b">
+                <a href="#page3" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-shadow ui-btn-icon-left">返回</a>
+                <h1>展覽介紹</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <img src="./image/img01.jpg">
+                <h3>宋　蘇軾　致季常尺牘</h3>
+                <p>蘇軾（1037－1101），四川眉山人。字子瞻，號東坡居士。博通經史，工詩詞，善書畫，與黃庭堅、米芾、蔡襄並譽為宋代四大書家。 
+                    此帖又名〈一夜帖〉或〈季常帖〉，乃蘇軾貶官黃州時寫給好友陳慥（字季常）的信函。內容為託季常代向王君解釋無法出借黃居寀畫作的原因，為表歉意，特隨信附上團茶一餅。
+                    書法遒勁磊落，行氣流暢，神采動人。本幅選自〈宋十二名家法書冊〉。</p>
+                <p>釋文：一夜尋黃居寀龍不獲。方悟半月前是曹光州借去摹搨。更須一兩月方取得。
+                    恐王君疑是翻悔。
+                    且告子細說與。纔取得。即納去也。却寄團茶一餅與之。旌其好事也。軾白。季常。廿三日。</p>
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>
+        <div data-role="page" id="img02">
+            <div data-role="header" data-theme="b">
+                <a href="#page3" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-shadow ui-btn-icon-left">返回</a>
+                <h1>展覽介紹</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <img src="./image/img02.jpg">
+                <h3>元　饒介　書七言律詩三首</h3>
+                <p>饒介（？－1367），字介之，號華蓋山樵、醉樵、浮丘公童子。
+                    江西臨川人。歷任翰林應奉僉江浙廉訪司事、淮南行省參知政事。工詩文，長書法。饒介書遠師王獻之與懷素。
+                    史稱其草書飄逸似懷素，圓勁朗暢，神追王獻之。 </p>
+                <p>本幅為〈元人法書〉第十四幅，用筆起伏多變化，在王獻之的行書風格中，又融入懷素的筆意。
+                    全作揮灑自如，氣脈酣暢，間雜章草筆法，益增古樸趣味。</p>
+                <p>釋文：虞山人勝伯。陳山人唯寅。皆為鄉里。解後共飲。問及仙遊事。欲所賦詩。未果寫。既去。僕已醉矣。酒醒遂和以答二賢初意。此凡四也。
+                    十八日介錄。掃除狡獪蓄神機。開頂葫蘆不置扉。人物已從垣外見。真形漸向市中微。盃淺白鴿沖霄去。劍化雙龍破浪歸。自此更無毫髮累。
+                    綠毛繞體欲成衣。 獨坐（點去）據胡床醉不移。坐深簷露滴髭眉。蕭蕭風水成音樂。澹澹星河起鷺鷥。語罷欲乘黃鶴去。興來忽使日雲馳。
+                    火龍□傲烹茶□。不析扶桑一氣炊。 羃羃松陰布網羅。鶴巢松頂吸天河。是何道士圍棋坐。著箇樵夫對酒歌。看月也知為爾好。憑風無奈欲歸何。
+                    送君直過橋西去。還記垂楊葉不多。</p>
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>
+        <div data-role="page" id="img03">
+            <div data-role="header" data-theme="b">
+                <a href="#page3" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-shadow ui-btn-icon-left">返回</a>
+                <h1>展覽介紹</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <img src="./image/img03.jpg">
+                <h3>明　文彭　書詩二首</h3>
+                <p>文彭（1498－1573），字壽承，號三橋，長州（今江蘇蘇州）人。文徵明長子，少承家學，詩書畫，無一不精。
+                    文彭能作各體書，其中以草書成就為高。此幅內容為兩首七言詩，描寫文人閒居風情，結構閒散不失章法，錯落有致，運筆變化豐富，奔放自在更甚其父。
+                    選自〈元明書翰第五十冊〉，據末頁所題寫予「隆池尊兄」，知是送給彭年（1505－1566）之作。</p>
+                <p>釋文：山水平生興不孤。嘉禾惟有水平鋪。不須刻木如朱子。自有營丘設色圖。 黃鳥啼春春晝長。帋屏矮几竹匡牀。薰罏香燼茶甌歇。掛起南窓納晚涼。</p>
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>
+        <div data-role="page" id="img04">
+            <div data-role="header" data-theme="b">
+                <a href="#page3" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-shadow ui-btn-icon-left">返回</a>
+                <h1>展覽介紹</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <img src="./image/img04.jpg">
+                <h3>清　張照　臨蘇軾尺牘、書七言詩</h3>
+                <p>張照（1691－1745），華亭（今上海松江）人，字得天，號涇南。深通釋典，研法律，能詩善畫，通音律，尤工書法。書風近承董其昌，上溯米芾，乾隆帝讚譽有佳，云是「寓端莊於流麗者」。
+                    右幅雖言「臨蘇軾尺牘」，然東坡原蹟不存，當是臨自清宮舊藏〈明董其昌臨宋四家書卷〉之段落。左幅繪壺、杯各一，壺身有張照書七言詩，述及宋人茶事。
+                    整幅裝裱新奇雅緻，詩、書、畫合為一體，搭配得宜。選自〈清張照雜書冊〉。</p>
+                <p>釋文： （右幅）昨夜清風明月。過蒙法施。今又惠及清泉。珍感不已。术湯法豉。恐濁卻妙供。謹卻回納。不一一。軾白。（左幅）松軒瓦甒試春芽。故事流傳盛宋家。
+                    君實清風携紙裡。端明微類貢綱茶。郊成手詔頒龍餅。宴罷親煎擊乳花。若使芝蘭獨沾溉。堂廉恩意古今誇。</p>
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>
+        <div data-role="page" id="img05">
+            <div data-role="header" data-theme="b">
+                <a href="#page3" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-shadow ui-btn-icon-left">返回</a>
+                <h1>展覽介紹</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <img src="./image/img05.jpg">
+                <h3>清　蒲華　行草七言聯</h3>
+                <p>蒲華（1832－1911），原名成，字竹英，一字作英，號胥山外史。秀水（今浙江嘉興）人。早歲畫花卉，上承徐渭、陳淳傳統。晚年愛畫墨竹，心醉文同。
+                    晚年寓上海，以鬻畫自給。曾遊日本，為彼邦人士推重。</p>
+                <p>蒲華自言其草書學唐呂洞賓（呂巖）及南宋白玉蟾（葛長庚）。此幅聯文：「讀畫清心時品茗，看花得意且含毫。」行草寫來線條豪邁蒼勁，落筆放逸不拘，獨樹書壇一幟。
+                    書於1895年，時年64歲。</p>
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>
+        <div data-role="page" id="img06">
+            <div data-role="header" data-theme="b">
+                <a href="#page3" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-shadow ui-btn-icon-left">返回</a>
+                <h1>展覽介紹</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <img src="./image/img06.jpg">
+                <h3>民國　溥儒　行書七言聯</h3>
+                <p>溥儒（1896－1963），字心畬，號西山逸士，河北宛平(今北京市)人，滿清宗室。民國成立後，一度隱居北京西山讀書，詩文、書畫造詣深厚。
+                    1949年渡海來臺，任教臺灣師範大學，作育英才，對藝壇影響頗為深遠。 
+                    此幅聯文：「竹泉洗研魚吞墨，松火烹茶鶴避煙。」描寫脫離塵俗的幽居生活和閒散安逸的心境。
+                    溥儒行書功力深厚，歷代經典名家之作，往往臨寫入神，從容變化之後，寫來瀟灑自然，秀逸挺勁。</p>
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>
+        <div data-role="page" id="img07">
+            <div data-role="header" data-theme="b">
+                <a href="#page3" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-shadow ui-btn-icon-left">返回</a>
+                <h1>展覽介紹</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <img src="./image/img07.jpg">
+                <h3>民國　張大千　菊花</h3>
+                <p>張大千（1899－1983），本名爰，號大千居士，四川內江人。詩文書畫皆擅，繪畫方面尤其才華出眾。
+                    抗戰期間，曾遠赴敦煌臨摹壁畫。六十歲以後，在傳統筆墨的基礎上，開闢潑墨、潑彩新格局，為享譽中外的藝術大家。 
+                    此幅以淡墨繪寫菊花、提壺，簡潔澹雅；款題：「茶已熟，花正開，賞秋人，來不來。」筆墨趣味古拙。
+                    約畫成於1932年，原為大千贈予陳雲誥（號蟄廬）之作。選自〈張大千于非闇花卉草蟲冊〉。</p>
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>
+        <div data-role="page" id="img08">
+            <div data-role="header" data-theme="b">
+                <a href="#page3" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-shadow ui-btn-icon-left">返回</a>
+                <h1>展覽介紹</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <img src="./image/img08.jpg">
+                <h3>清　郭麐　行書七言聯</h3>
+                <p>郭麐（1767－1831），字祥伯，號頻伽，別號邃庵，晚稱復翁。因右眉全白，又號白眉生。江蘇吳江人。游姚鼐之門，尤為阮元所賞識。工詞章，善篆刻。
+                    書法學習黃庭堅。 聯文：「茶甘半日如新啜，墨玅移時不再磨。」引自南宋詩人陸游所作〈初秋雜詠〉。
+                    時人梁章鉅（1775－1849）言郭書：「字專師涪翁（黃庭堅），時偽作沈（沈周）跡。」本幅結字敧側中帶安穩，用筆凝練且有韻致，果具黃、沈風貌。</p>
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>
+        <div data-role="page" id="page4">
+            <div data-role="panel" id="myPanel2" style="background-color:#DDDDDD">
+                <h2 style="text-align:center">功能列表</h2>
+                <a href="#page2" class="ui-btn ui-corner-all ui-shadow" data-transition="pop">當期展覽</a>
+                <a href="#page3" class="ui-btn ui-corner-all ui-shadow" data-transition="pop">展覽介紹</a>
+                <a href="#page5" class="ui-btn ui-corner-all ui-shadow" id="member3" onclick="logout()">會員登入</a>
+                <a href="#page7" class="ui-btn ui-corner-all ui-shadow" data-transition="pop" id="shop3" onclick="check()">購物車</a>
+            </div>
+            <div data-role="header" data-theme="b">
+                <a href="#myPanel2" class="ui-btn ui-btn-inline ui-corner-all ui-icon-grid ui-shadow ui-btn-icon-left">選單</a>
+                <a href="#pageone" data-transition="slide" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">回首頁</a>
+                <h1>導覽功能</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <div  class="qrcode QRimg">
+                    <img src="./image/penQRCode.jpg"></br>
+                    <p class="text">筆有千秋業</p>
+                </div>
+                <div  class="qrcode QRimg2">
+                    <img src="./image/waterQRCode.jpg"></br>
+                    <p class="text">源頭活水來</p>
+                </div>
+                <div  class="qrcode QRimg3">
+                    <img src="./image/modelQRCode.jpg"></br>
+                    <p class="text">造型與美感</p>
+                </div>
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>
+        <!-- page5 會員登錄-->
+        <div data-role="page" data-dialog="true" id="page5" >
+            <div data-role="header" data-theme="b">
+                <h1>會員登入</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <div class="ui-field-contain">
+                    <label>帳號:</label>
+                    <input type="text"  id="account">       
+                    <label >密碼:</label>
+                    <input type="text" id="password">
+                    <a href="#page6" class="ui-btn ui-btn-inline" onclick="login()">登入</a>
+                </div>
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>   
+        <!--刮刮樂 page6-->
+        <div data-role="page" id="page6" >
+            <div data-role="header" data-theme="b">
+                <a href="#pageone" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-shadow ui-btn-icon-left">返回</a>
+                <h1>刮刮樂</h1>
+            </div>
+            <div data-role="main" class="ui-content">           
+                <div id="scratcher-box" class="scratcher">
+                    <div>
+                        <canvas id="scratcher1" class="demo-canvas scratcher" width="300" height="150"></canvas>
+                    </div>
+                    <div id="scratcher3Pct" class="scratcher-margin-bottom">0%</div>
+                    <input type="button" value="確定" onclick="scratch()">
+                </div>
+            </div>
+            <script src="script/scratcher.js"></script>
+            <script src="script/main.js"></script>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>   
+        <!--購物車 page7-->
+        <div data-role="page" id="page7" >
+            <div data-role="header" data-theme="b">
+                <a href="#pageone" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-shadow ui-btn-icon-left">返回</a>
+                <h1>購物車</h1>
+            </div>
+            <div data-role="main" class="ui-content">           
+                <table data-role="table"  class="ui-responsive ui-shadow" id="myTable">
+                    <thead>
+                        <tr>
+                        <th style="width:25%;text-align:center"></th>
+                        <th style="width:25%;text-align:center"></th>
+                        <th style="width:25%;text-align:center"></th>
+                        <th style="width:25%;text-align:center"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td style="width:25%;text-align:center"><img src="./image/dish.jpg"></td>
+                        <td style="width:25%;text-align:center" id="dish">盤子</td>
+                        <td style="width:25%;text-align:center">150</td>
+                        <!-- <td style="width:25%;text-align:center"><input type="number" id="number"></td> -->
+                        <td style="width:25%;text-align:center">  <select id="number">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                        <td style="width:25%;text-align:center"><img src="./image/flower.jpg"></td>
+                        <td style="width:25%;text-align:center" id="flower">花瓶</td>
+                        <td style="width:25%;text-align:center">200</td>
+                        <!-- <td style="width:25%;text-align:center"><input type="number" id="number2"></td> -->
+                        <td style="width:25%;text-align:center">  <select id="number2">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                        <td style="width:25%;text-align:center"><img src="./image/draw.jpg"></td>
+                        <td style="width:25%;text-align:center" id="draw">圖畫</td>
+                        <td style="width:25%;text-align:center">300</td>
+                        <!--  <td style="width:25%;text-align:center"><input type="number" id="number3"></td> -->
+                        <td style="width:25%;text-align:center">  <select id="number3">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#page8" class="ui-btn" onclick="save()" >下一步</a> 
+                <div data-role="footer" data-theme="b" data-position="inline">
+                    <h1>Footer Text</h1>
+                </div> 
+            </div>   
+        </div>
+        <!-- page8 搖一搖 -->
+        <div data-role="page" id="page8" >
+            <div data-role="header" data-theme="b">
+                <h1>搖一搖</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <div class="shake-icon">
+                    <div id="hand" class="hand hand-animate"></div>
+                    <div id="result"></div>
+                </div>
+                <a href="#page9" class="ui-btn ui-corner-all ui-shadow" data-transition="pop" onclick="order()">您的訂單</a>
+                <div data-role="popup" id="mymoney">
+                    <div data-role="header">
+                        <h1>結帳</h1>
+                    </div>
+
+                    <div data-role="main" class="ui-content">
+                        <p id="res"></p>
+                        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">確定</a>
+                    </div>
+
+                    <div data-role="footer">
+                        <h1>Footer Text</h1>
+                    </div>
+                </div>
+            </div>
+            <script src="script/shake.js"></script>
+            <script>
+                        window.onload = function() {
+                            //create a new instance of shake.js.
+                            var myShakeEvent = new Shake({
+                                threshold: 15
+                            });
+                            // start listening to device motion
+                            myShakeEvent.start();
+
+                            // register a shake event
+                            window.addEventListener('shake', shakeEventDidOccur, false);
+
+                            //shake event callback
+                            function shakeEventDidOccur() {
+                                var result = document.getElementById("result");
+                                result.className = "result";
+                                var arr = [5, 7, 8, 9];
+                                var num = Math.floor(Math.random() * 4);
+                                result.innerHTML = "恭喜，您獲得 " + arr[num] + " 折的折扣！";
+                                setTimeout(function() {
+                                    result.className = "result result-show";
+                                }, 1000);
+                                window.removeEventListener('shake', shakeEventDidOccur, false);
+                                var discount = JSON.stringify(arr[num]);
+                                localStorage.setItem('discount', discount);
+                            }
+                        };
+            </script>
+
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>   
+        <!--訂單 page9-->
+        <div data-role="page" id="page9" >
+            <div data-role="header" data-theme="b">
+                <h1>您的訂單</h1>
+            </div>
+            <div data-role="main" class="ui-content">           
+                <b>您的訂單：</b>
+                <p>商品</p>
+                <label>盤子：<span id="dish2"></span></label>
+                <p>花瓶：<span id="flower2"></span></p>
+                <p>圖畫：<span id="draw2"></span></p>
+            <p>使用優惠券：<span id="coupon"></span></p>
+                <p>總共：<span id="sum"></span></p>
+        <a href="#page10" class="ui-btn ui-corner-all ui-shadow" data-transition="pop">產生訂單QRCODE</a>
+            </div>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>   
+        <!--產生QRCODE page10-->
+        <div data-role="page" id="page10" >
+            <div data-role="header" data-theme="b">
+                <a href="#pageone" class="ui-btn ui-btn-inline ui-corner-all ui-icon-back ui-shadow ui-btn-icon-left">返回</a>
+                <h1>訂單</h1>
+            </div>
+            <div data-role="main" class="ui-content">           
+                <div id="QRcontainer"></div>
+            </div>
+            <script src="script/jquery.qrcode.min.js"></script>
+            <script>
+                        jQuery(function() {
+                            jQuery('#QRcontainer').qrcode({width: 200, height: 200, text: "http://fs.mis.kuas.edu.tw/~s1101137147/museum/public_html/#page9"});
+                        })
+            </script>
+            <div data-role="footer" data-theme="b" data-position="inline">
+                <h1>Footer Text</h1>
+            </div> 
+        </div>   
+    </body>
+</html>
